@@ -56,6 +56,21 @@ const CustomCalendar = () => {
                 style={{ height: 500 }}
                 defaultView="month" 
                 views={['month', 'week', 'day', 'agenda']}
+                components={{
+                    event: ({ event }) => (
+                        <div
+                            style={{
+                                overflow: 'visible',
+                                whiteSpace: 'normal',
+                                fontSize: '0.9rem',
+                                padding: '2px'
+                            }}
+                            title={event.title} // Tooltip for full title display
+                        >
+                            {event.title}
+                        </div>
+                    ),
+                }}
             />
         </Box>
     );

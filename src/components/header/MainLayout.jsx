@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, Toolbar } from '@mui/material';
-import Sidebar from './Sidebar';
+import SideBar from './SideBar';
 import NavBar from './NavBar';
 import { useLocation } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
     return (
         <Box sx={{ display: 'flex', minHeight: '100vh' }}>
             <NavBar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
-            {isDrawerOpen && <Sidebar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />}
+            {isDrawerOpen && <SideBar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />}
             <Box
                 component="main"
                 sx={{
